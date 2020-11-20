@@ -20,8 +20,8 @@ namespace PaginaCine.Controllers
 
         public ActionResult Details(int id)
         {
-            var category = db.Categories.Find(id);
-            return View(category);
+            var cine = db.Cines.Find(id);
+            return View(cine);
         }
 
         public ActionResult Delete(int id)
@@ -32,9 +32,10 @@ namespace PaginaCine.Controllers
 
         public ActionResult Edit(int id)
         {
-            var category = db.Categories.Find(id);
-            return View();
+            var cine = db.Cines.Find(id);
+            return View(cine);
         }
+
         [HttpPost]
         public ActionResult Edit(int id, Category c)
         {
